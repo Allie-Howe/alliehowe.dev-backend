@@ -1,0 +1,19 @@
+{
+  "name": "alliehowe.dev-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc-watch --onSuccess \"node ./build/index.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "4.20.0"
+  },
+  "devDependencies": {
+    "tsc-watch": "6.0.4",
+    "typescript": "5.1.6"
+  }
+}
