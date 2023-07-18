@@ -10,7 +10,7 @@ configDotenv();
 const lastFmUser = 'HoweIsAllie';
 
 const corsOptions = {
-  origin: 'https://alliehowe.dev/',
+  origin: true
 };
 
 app.use(cors(corsOptions));
