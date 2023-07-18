@@ -1,5 +1,6 @@
 import express from 'express';
 import { configDotenv } from 'dotenv';
+import fetch from 'node-fetch';
 
 const app = express();
 const port = process.env.PORT || 4321;
