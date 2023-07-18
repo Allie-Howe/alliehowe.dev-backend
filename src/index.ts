@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import { configDotenv } from 'dotenv';
 import fetch from 'node-fetch';
@@ -7,6 +8,12 @@ const port = process.env.PORT || 4321;
 
 configDotenv();
 const lastFmUser = 'HoweIsAllie';
+
+const corsOptions = {
+  origin: 'https://alliehowe.dev/',
+};
+
+app.use(cors(corsOptions));
 
 app.get('/', async (_, res) => {
   const lfmRes = await fetch(`http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${lastFmUser}&api_key=${process.env.LASTFM_CLIENT}&format=json`)
