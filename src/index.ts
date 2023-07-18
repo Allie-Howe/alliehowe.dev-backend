@@ -17,7 +17,7 @@ app.get('/', async (_, res) => {
 
   const mostRecentTrack = mapRawTrackToTrack(rawMostRecentTrack)
 
-  res.send(mostRecentTrack);
+  res.json(mostRecentTrack);
 });
 
 app.listen(port, () => {
